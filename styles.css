@@ -131,6 +131,23 @@ em { color: var(--red); font-style: normal; }
 .person-info h3 { font-size: 31px; margin: 0; line-height: 1; }
 .person-info p { color: var(--red); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; margin: 8px 0 0; }
 
+.projects { background: var(--cream); }
+.projects-heading { max-width: 1150px; margin: 0 auto 55px; }
+.project-card {
+  max-width: 1150px; margin: auto;
+  display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px;
+  align-items: center;
+  background: #fff;
+}
+.project-image { aspect-ratio: 1402 / 1122; overflow: hidden; background: #171310; display: flex; align-items: center; justify-content: center; }
+.project-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.project-info { padding: 20px 45px 20px 0; }
+.project-info h3 { font-size: 34px; line-height: 1; margin: 0; }
+.project-date { color: var(--red); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; margin: 16px 0 26px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 14px; }
+.project-links .button-light { margin-top: 0; background: transparent; color: var(--ink); border-color: var(--ink); }
+.project-links .button-light:hover { background: var(--ink); color: #fff; }
+
 .contact { background: var(--black); color: #fff; }
 .contact .section-label { border-color: rgba(255,255,255,.2); }
 .contact-content { max-width: 1150px; margin: auto; display: grid; grid-template-columns: 1.2fr .8fr; gap: 8vw; align-items: end; }
@@ -149,7 +166,8 @@ footer {
   .site-header { padding: 18px 5vw; }
   .hero { min-height: 82vh; }
   .section { padding: 75px 7vw; }
-  .intro-grid, .team-grid, .contact-content { grid-template-columns: 1fr; }
+  .intro-grid, .team-grid, .contact-content, .project-card { grid-template-columns: 1fr; }
+  .project-info { padding: 25px; }
   .story-card { grid-template-columns: 1fr; gap: 10px; }
   .story-number { font-size: 46px; }
   .team-grid { gap: 25px; }
