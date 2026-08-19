@@ -67,8 +67,28 @@ nav a:hover { opacity: 1; }
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .12;
-  background-image: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 4px);
+  opacity: .5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.05) 50%, transparent 62%);
+  pointer-events: none;
+}
+.hero-logo {
+  position: absolute;
+  z-index: 1;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(220px, 24vw, 400px);
+  height: auto;
+  opacity: .92;
+  filter: drop-shadow(0 25px 45px rgba(0,0,0,.55));
   pointer-events: none;
 }
 .hero-content { position: relative; z-index: 2; width: 90%; max-width: 1100px; margin: 100px auto 0; }
@@ -165,6 +185,7 @@ footer {
   nav { display: none; }
   .site-header { padding: 18px 5vw; }
   .hero { min-height: 82vh; }
+  .hero-logo { display: none; }
   .section { padding: 75px 7vw; }
   .intro-grid, .team-grid, .contact-content, .project-card { grid-template-columns: 1fr; }
   .project-info { padding: 25px; }
