@@ -184,18 +184,8 @@ footer {
 @media (max-width: 750px) {
   nav { display: none; }
   .site-header { padding: 18px 5vw; }
-  .hero { min-height: 82vh; }
-  /* .hero-logo { display: none; } */
-  .section { padding: 75px 7vw; }
-  .intro-grid, .team-grid, .contact-content, .project-card { grid-template-columns: 1fr; }
-  .project-info { padding: 25px; }
-  .story-card { grid-template-columns: 1fr; gap: 10px; }
-  .story-number { font-size: 46px; }
-  .team-grid { gap: 25px; }
-  footer { flex-direction: column; }
-}
-@media (max-width: 750px) {
   .hero {
+    min-height: 82vh;
     flex-direction: column;
     padding-top: 110px;
   }
@@ -210,6 +200,17 @@ footer {
   .hero-content {
     margin-top: 0;
   }
+  h1 {
+    font-size: clamp(38px, 11vw, 90px);
+    overflow-wrap: break-word;
+  }
+  .section { padding: 75px 7vw; }
+  .intro-grid, .team-grid, .contact-content, .project-card { grid-template-columns: 1fr; }
+  .project-info { padding: 25px; }
+  .story-card { grid-template-columns: 1fr; gap: 10px; }
+  .story-number { font-size: 46px; }
+  .team-grid { gap: 25px; }
+  footer { flex-direction: column; }
 }
 /* Razor Blade Productions Logo */
 .brand-logo {
