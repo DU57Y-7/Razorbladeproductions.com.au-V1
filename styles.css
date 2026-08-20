@@ -185,7 +185,7 @@ footer {
   nav { display: none; }
   .site-header { padding: 18px 5vw; }
   .hero { min-height: 82vh; }
-  .hero-logo { display: none; }
+  /* .hero-logo { display: none; } */
   .section { padding: 75px 7vw; }
   .intro-grid, .team-grid, .contact-content, .project-card { grid-template-columns: 1fr; }
   .project-info { padding: 25px; }
