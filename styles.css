@@ -164,7 +164,15 @@ em { color: var(--red); font-style: normal; }
 .project-info { padding: 20px 45px 20px 0; }
 .project-info h3 { font-size: 34px; line-height: 1; margin: 0; }
 .project-date { color: var(--red); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; margin: 16px 0 26px; }
-.project-links { display: flex; flex-wrap: wrap; gap: 14px; }
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+.project-links .button {
+  text-align: center;
+}
 .project-links .button-light { margin-top: 0; background: transparent; color: var(--ink); border-color: var(--ink); }
 .project-links .button-light:hover { background: var(--ink); color: #fff; }
 
@@ -205,12 +213,48 @@ footer {
     overflow-wrap: break-word;
   }
   .section { padding: 75px 7vw; }
+  h1, h2, h3 { 
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  h2 { font-size: clamp(42px, 13vw, 64px); line-height: .92; }
+  h3 { font-size: clamp(28px, 8vw, 38px); line-height: 1; }
   .intro-grid, .team-grid, .contact-content, .project-card { grid-template-columns: 1fr; }
   .project-info { padding: 25px; }
   .story-card { grid-template-columns: 1fr; gap: 10px; }
   .story-number { font-size: 46px; }
   .team-grid { gap: 25px; }
-  footer { flex-direction: column; }
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .project-links .button {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+    padding: 30px 7vw;
+  }
+
+  .footer-brand {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+    max-width: 70vw;
+  }
 }
 /* Razor Blade Productions Logo */
 .brand-logo {
@@ -242,4 +286,34 @@ footer {
   height: auto;
   max-height: 42px;
   object-fit: contain;
+}
+
+
+/* Mobile layout fixes */
+@media (max-width: 750px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .project-links a {
+    overflow-wrap: anywhere;
+  }
+
+  .contact-content {
+    text-align: center;
+  }
+
+  .contact-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-content .button-light {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
