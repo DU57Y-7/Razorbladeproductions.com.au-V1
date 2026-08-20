@@ -195,16 +195,20 @@ footer {
   footer { flex-direction: column; }
 }
 @media (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 110px;
+  }
   .hero-logo {
     display: block;
     position: static;
     transform: none;
     width: 140px;
-    margin: 0 auto 24px;
+    margin: 0 auto 20px;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,.5));
   }
   .hero-content {
-    margin-top: 60px;
+    margin-top: 0;
   }
 }
 /* Razor Blade Productions Logo */
